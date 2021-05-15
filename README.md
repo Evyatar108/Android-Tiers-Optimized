@@ -25,11 +25,27 @@
     </a>
 </p>
 
-# Android Tiers
+# Optimizations
+* Replaced linear searches over lists with hash sets.
+* Removed many creations of new lists objects when not needed.
+* Caching computations when possible
+   * Creating lists objects for enumerable when they are iterated more than once.
+   * Caching global getters' computation as a static object if they are practiacally immutable.
+   * Replace DistanceTo() calls with DistanceToSquared() to reduce Math.Sqrt() calls.
+   * Store indexing of arrays in local objects instead of performing multiple indexing calls.
+* Replaced string concatination with an equivalent procedure using StringBuilder and string interpolation.
+* Reducing reflection operations when possible by using Traverse of the Harmony library
+* Reduced nested loops when possible, avoiding redundant iterations.
+* Replaced some LINQ method calls with for and foreach loops.
+* Replaced with ContainsKey()+indexing with a single TryGetValue()
+
+And many others.
+
+## Android Tiers
  Android Tiers aims to add several tiers of sentient android colonists, robots, mechs and other features. In an attempt to vastly extend late-game colonies.
  See the Change Notes tab in [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/changelog/1386412863) or the [Github repository](https://github.com/Atla55/Android-Tiers-Core) for info on the latest updates.
 
-## Features
+### Features
 
 * 2 New Android Factions
 * 70 Android backstories
@@ -52,7 +68,7 @@
 * 5 Android specific "drugs"
 * Android specific capacities
 
-## Special items & events
+### Special items & events
 
 **Mech-Fall Transmitter**: This is the orbital targetter needed to spawn the M7 Mech. It can be obtained from item stash quests and traders, similar to the way other orbital weapons are gained.
 
@@ -66,7 +82,7 @@
 
 **SkyCloud**: Allow to digitize and store your colonists minds in supercomputers, from which you can control your entire colony.
 
-## Androids
+### Androids
 
 ![T1](https://i.imgur.com/OXKaPAI.png)
 ![T2](https://i.imgur.com/mi8RwKk.png)
@@ -97,7 +113,7 @@ Summary: produces nutrient solution, a form of artifical milk that holds twice a
 Summary: every 2 days will dispense up to 5 capsules at once, these capsules contain semi-refined resources within them that can either be further developed into chemfuel or neutroamine at a drug lab or refinery.
 
 
-## Links
+### Links
 
 [Source code](https://github.com/Atla55/Android-Tiers-Core)
 
@@ -112,7 +128,7 @@ Uplinked for helping write backstories. More info on him can be seen [HERE](upli
 [Trunken](https://steamcommunity.com/profiles/76561198095669661/myworkshopfiles?browsefilter=myfavorites&appid=294100) for making the workshop page look beautiful with his preview images.
 
 
-## Donations
+### Donations
 
 [ Atlas's Kofi Page (Author of android tiers) ](https://ko-fi.com/S6S3CZG9)
 
